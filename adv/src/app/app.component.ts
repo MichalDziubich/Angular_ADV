@@ -9,6 +9,9 @@ import {
   AfterViewChecked,
   OnDestroy,
 } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+import { ChildrenComponent } from './children/children.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +29,8 @@ export class AppComponent
   AfterViewChecked,
   OnDestroy {
   title = 'SDA-angular';
+  childrenData: FormControl = new FormControl('');
+
   ngOnChanges(e) {
     console.log('ngOnChanges', e);
   }
